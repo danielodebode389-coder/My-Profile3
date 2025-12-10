@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - YourName</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+  <div class="logo">My Portfolio</div>
+  <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="projects-section">
+  <h2 class="projects-title">My Projects</h2>
+  <p class="projects-subtitle">Creative • Interactive • Professional</p>
+
+
+
+  <!-- Projects Grid -->
+  <div class="projects-grid">
+
+      <div class="project-card" data-category="web">
+          <div class="project-info">
+              <h3>Project One</h3>
+              <p>Personal Portfolio</p>
+              <a href="#" class="btn view-project" data-title="Project One" data-desc="A Personal portfolio to show my skills, projects, and social media.">View</a>
+          </div>
+      </div>
+
+      <div class="project-card" data-category="ui">
+          <div class="project-info">
+              <h3>Project Two</h3>
+              <p>Ai ChatBot</p>
+              <a href="#" class="btn view-project" data-title="Project Two" data-desc="A python chatBot that chats and answer questions." >View</a>
+          </div>
+      </div>
+
+      <div class="project-card" data-category="app">
+          <div class="project-info">
+              <h3>Project Three</h3>
+              <p>Calculator.</p>
+              <a href="#" class="btn view-project" data-title="Project Three" data-desc="A Basic calculator app using python, JavaScript, Html and css ." data-img="project3.jpg">View</a>
+          </div>
+      </div>
+
+      <div class="project-card" data-category="web">
+          <div class="project-info">
+              <h3>Project Four</h3>
+              <p>To-do List App.</p>
+              <a href="#" class="btn view-project" data-title="Project Four" data-desc="An app using python in which users can add, edit, and delete tasks.">View</a>
+          </div>
+      </div>
+
+  </div>
+</section>
+
+<!-- Project Modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Your Name | All Rights Reserved</p>
+</footer>
+<script>
+// FILTER PROJECTS
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+            if(filter === 'all' || card.dataset.category === filter){
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+// MODAL FUNCTIONALITY
+const modal = document.getElementById('projectModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalImg = document.getElementById('modalImg');
+const modalDesc = document.getElementById('modalDesc');
+const closeModal = document.querySelector('.close');
+
+document.querySelectorAll('.view-project').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'flex';
+        modalTitle.textContent = button.dataset.title;
+        modalDesc.textContent = button.dataset.desc;
+        modalImg.src = button.dataset.img;
+    });
+});
+
+closeModal.onclick = () => { modal.style.display = 'none'; }
+window.onclick = e => { if(e.target == modal) modal.style.display = 'none'; }
+</script>
+
+
+
+</body>
+</html>

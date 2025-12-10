@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background: #222;
+        }
+  /* ABOUT SPECIAL */
+.about-special {
+    padding: 80px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #0d0d0d, #1b1b1b);
+    color: white;
+}
+
+.about-card {
+    display: flex;
+    gap: 50px;
+    background: #111;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(74, 215, 255, 0.2);
+    border: 1px solid rgba(74, 215, 255, 0.3);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.image-box {
+    width: 350px;
+    height: 330px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid #4ad7ff;
+    box-shadow: 0 0 20px rgba(74, 215, 255, 0.4);
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content {
+    max-width: 500px;
+}
+
+.about-content h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #4ad7ff;
+}
+
+.about-content p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.about-stats {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 32px;
+    color: #4ad7ff;
+}
+
+.stat p {
+    margin-top: -8px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to   {opacity: 1; transform: translateY(0);}
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-stats {
+        justify-content: center;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">My Portfolio</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="section">
+    <h2>About Me</h2>
+    
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<section class="about-special">
+
+    <div class="about-card">
+
+        <div class="image-box">
+            <img src="IMG-20251127-WA0198_1.jpg" alt="Profile">
+        </div>
+
+        <div class="about-content">
+            <h2>About Me</h2>
+
+            <p>
+                I am a passionate and creative web developer who loves building beautiful,
+                clean, and user-focused digital experiences.
+        I specialize in modern frontend tools and enjoy solving real world problems
+        through technology.
+    </p>  
+            </p>
+
+            <p>
+                My work blends modern design, smooth animations, and responsive layout to 
+                create websites that feel alive and professional.  
+            </p>
+
+            <p>
+                I enjoy solving problems and bringing ideas to life with code — from simple 
+                interfaces to advanced and interactive projects.
+            </p>
+
+            <div class="about-stats">
+                <div class="stat">
+                    <h3>6+</h3>
+                    <p>Months Experience</p>
+                </div>
+
+                <div class="stat">
+                    <h3>15+</h3>
+                    <p>Completed Projects</p>
+                </div>
+
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</body>
+</html>
+
+</section>
+
+<footer><p>© 2025 Odebode Daniel | All Rights Reserved</p></footer>
+
+</body>
+</html>
